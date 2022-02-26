@@ -11,9 +11,9 @@ bot = telebot.TeleBot(TOKEN)
 @bot.message_handler(content_types=['text'])
 def get_text_messages(message):
     if message.text == "/picture":
-        bot.send_message(message.from_user.id, "Сейчас я отправлютебе дурацкую картинку:)")
+        bot.send_message(message.from_user.id, "Сейчас я отправлютебе дурацкое поздравление:)")
         bot.send_photo(message.chat.id, get(choice(pictures)).content)
-        bot.send_message(message.from_user.id, "Хочешь еще одну? Напиши /picture")
+        bot.send_message(message.from_user.id, "Хочешь еще одно? Напиши /picture")
     else:
         bot.send_message(message.from_user.id, "Привет, я бот, которые отправляет картинки с тупыми поздравлениями! Чтобы получить картинку нажми /picture")
 
