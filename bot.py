@@ -15,7 +15,7 @@ def get_text_messages(message):
         bot.send_photo(message.chat.id, get(choice(pictures)).content)
         bot.send_message(message.from_user.id, "Хочешь еще одну? Напиши /picture")
     else:
-        bot.send_message(message.from_user.id, "Привет, я бот, которые отправляет тупые картинки! Чтобы получить картинку нажми /picture")
+        bot.send_message(message.from_user.id, "Привет, я бот, которые отправляет картинки с тупыми поздравлениями! Чтобы получить картинку нажми /picture")
 
 
 bot.polling(none_stop=True, interval=0)
